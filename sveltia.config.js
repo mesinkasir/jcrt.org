@@ -1,15 +1,14 @@
-// sveltia.config.js - Sveltia CMS Configuration
-
 export default {
-    // Media configuration (Menggantikan media_folder dan menambahkan public_folder)
+	  backend: {
+      name: 'cms', 
+      api_root: '/sveltia-server', 
+      backend_name: 'github', 
+    },
     media: {
-        // Path fisik di dalam repo tempat gambar diunggah
         directory: 'public/img',
-        // Path publik yang akan digunakan dalam konten
         publicPath: '/img'
     },
 
-    // Collections (Menggantikan seluruh blok 'collections')
     collections: [
         // --- 1. HOME PAGE (Single File: content/index.md) ---
         {
