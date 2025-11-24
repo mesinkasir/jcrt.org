@@ -16,3 +16,14 @@ https://github.com/settings/tokens
 ### ENV
 
 Now you can insert Env configuration on your host.
+
+### Server
+
+Now you need to update your `wrangler.toml` on your server repo and add your `workers` 
+
+Example:
+```
+name = 'authsveltia'
+main = "src/index.js"
+compatibility_date = "2025-11-23"
+```
