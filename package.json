@@ -4,9 +4,9 @@
 	"description": "JCRT Project develop by Adam Dj Brett.",
 	"type": "module",
 	"scripts": {
-		"start:cms": "node -r dotenv/config @sveltia/cms start", 
-    	"start:eleventy": "npx @11ty/eleventy --serve",
-    	"start": "npm-run-all --parallel start:eleventy start:cms",
+		"start:cms": "node -r dotenv/config @sveltia/cms start",
+		"start:eleventy": "npx @11ty/eleventy --serve",
+		"start": "npm-run-all --parallel start:eleventy start:cms",
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
 		"build-ghpages": "npx @11ty/eleventy --pathprefix=/jcrt.org/",
