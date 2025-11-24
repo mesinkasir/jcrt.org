@@ -2,7 +2,7 @@ backend:
   name: github
   repo: mesinkasir/jcrt.org
   branch: main
-  base_url: ttps://auth11tysveltia.hockeycorpmarketing.workers.dev/
+  base_url: https://auth11tysveltia.hockeycorpmarketing.workers.dev/ # Pastikan URL ini benar
 
 media_folder: "public/img"
 
@@ -50,20 +50,18 @@ collections:
                   - {label: "Text", name: "text", widget: "string"}
                   - {label: "URL", name: "url", widget: "string"}
           - {label: "Body Content", name: "body", widget: "markdown"}
-  - name: "authors" # Diubah dari "Authors" menjadi "authors" (huruf kecil)
+  - name: "authors"
     label: "Authors"
     preview: false
     files:
       - file: "_data/authors.yaml"
         label: "Authors List"
         name: "authors_list"
-        fields: # Ditambahkan fields di sini
-          - {label: "Authors", name: "authors", widget: "list", fields: [
-              {label: "Key (Slug)", name: "key", widget: "string", hint: "Use lower case, example: john_dhoe"},
-              {label: "Name", name: "name", widget: "string"},
-              {label: "Biography", name: "bio", widget: "text"},
-              {label: "Image URL", name: "image", widget: "image"}
-            ]}
+        fields:
+          - {label: "Key (Slug)", name: "key", widget: "string", hint: "Use lower case, example: john_dhoe"}
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Biography", name: "bio", widget: "text"}
+          - {label: "Image URL", name: "image", widget: "image"}
 
   - name: "blogIndex"
     label: "Blog Index"
