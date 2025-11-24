@@ -1,10 +1,9 @@
 backend:
   name: github
-  repo: adamdjbrett/jcrt.org
+  repo: mesinkasir/jcrt.org
   branch: main
-  base_url: https://auth11tysveltia.hockeycorpmarketing.workers.dev/
+  base_url: ttps://auth11tysveltia.hockeycorpmarketing.workers.dev/
 
-# The folder used to store uploaded images
 media_folder: "public/img"
 
 collections:
@@ -51,18 +50,21 @@ collections:
                   - {label: "Text", name: "text", widget: "string"}
                   - {label: "URL", name: "url", widget: "string"}
           - {label: "Body Content", name: "body", widget: "markdown"}
+  - name: "authors" # Diubah dari "Authors" menjadi "authors" (huruf kecil)
     label: "Authors"
     preview: false
     files:
       - file: "_data/authors.yaml"
         label: "Authors List"
         name: "authors_list"
-        widget: "list"
-        fields:
-          - {label: "Key (Slug)", name: "key", widget: "string", hint: "Use lower case, example: john_dhoe"}
-          - {label: "Name", name: "name", widget: "string"}
-          - {label: "Biography", name: "bio", widget: "text"}
-          - {label: "Image URL", name: "image", widget: "image"}
+        fields: # Ditambahkan fields di sini
+          - {label: "Authors", name: "authors", widget: "list", fields: [
+              {label: "Key (Slug)", name: "key", widget: "string", hint: "Use lower case, example: john_dhoe"},
+              {label: "Name", name: "name", widget: "string"},
+              {label: "Biography", name: "bio", widget: "text"},
+              {label: "Image URL", name: "image", widget: "image"}
+            ]}
+
   - name: "blogIndex"
     label: "Blog Index"
     preview: true
@@ -103,10 +105,10 @@ collections:
       - label: "Author"
         name: "author"
         widget: "relation"
-        collection: "authors_list"
-        search_fields: ["fields.*.name"]
-        value_field: "fields.*.key"
-        display_fields: ["fields.*.name"]
+        collection: "authors" # Diubah ke "authors" (huruf kecil)
+        search_fields: ["authors.*.name"] # Diubah ke "authors.*.name"
+        value_field: "authors.*.key" # Diubah ke "authors.*.key"
+        display_fields: ["authors.*.name"] # Diubah ke "authors.*.name"
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authorList"
     label: "Author List"
