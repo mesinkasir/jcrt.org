@@ -105,10 +105,11 @@ collections:
       - label: "Author"
         name: "author"
         widget: "relation"
-        collection: "authors" # Diubah ke "authors" (huruf kecil)
-        search_fields: ["authors.*.name"] # Diubah ke "authors.*.name"
-        value_field: "authors.*.key" # Diubah ke "authors.*.key"
-        display_fields: ["authors.*.name"] # Diubah ke "authors.*.name"
+        collection: "authors" 
+        file: "_data/authors.yaml"
+        search_fields: ["name"]
+        value_field: "key"
+        display_fields: ["name"]
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authorList"
     label: "Author List"
