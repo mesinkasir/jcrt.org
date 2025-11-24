@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: mesinkasir/jcrt.org
+  repo: adamdjbrett/jcrt.org
   branch: main
-  base_url: https://auth11tysveltia.hockeycorpmarketing.workers.dev/
+  base_url: xxxx # yourworker cloudflare
 
 media_folder: "public/img"
 
