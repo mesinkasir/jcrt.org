@@ -102,14 +102,10 @@ collections:
       - {label: "Description", name: "description", widget: "text", hint: "A short summary of the post."}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
-      - label: "Author"
+      - label: "Author Key"
         name: "author"
-        widget: "relation"
-        collection: "authors" 
-        file: "_data/authors.yaml"
-        search_fields: ["name"]
-        value_field: "key"
-        display_fields: ["name"]
+        widget: "string" # Diubah menjadi widget string
+        hint: "Authors" # Tambahkan petunjuk (opsional)
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "authorList"
     label: "Author List"
