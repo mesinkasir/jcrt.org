@@ -1,5 +1,5 @@
 import { handleRequest } from '@sveltia/cms'; 
-const env = process.env; 
+
 export default {
     async onRequest(context) {
         const requiredEnv = {
@@ -10,7 +10,9 @@ export default {
             SVELTIA_OAUTH_CLIENT_ID: context.env.SVELTIA_OAUTH_CLIENT_ID,
             SVELTIA_OAUTH_CLIENT_SECRET: context.env.SVELTIA_OAUTH_CLIENT_SECRET,
         };
-        const body = await context.request.text();        
+
+        const body = await context.request.text(); 
+
         return handleRequest({
             method: context.request.method,
             headers: context.request.headers,
