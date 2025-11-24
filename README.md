@@ -13,3 +13,6 @@ Create Oauth Apps https://github.com/settings/developers , New OAuth App.
 Next you ned to create personal access token - token clasic
 https://github.com/settings/tokens
 
+### ENV
+
+Now you can insert Env configuration on your host.
