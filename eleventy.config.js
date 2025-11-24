@@ -28,6 +28,7 @@ export default async function (eleventyConfig) {
 		}
 	});
 	eleventyConfig.addPassthroughCopy("sveltia.config.js");
+	eleventyConfig.addWatchTarget("./functions/");
 	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 	eleventyConfig
 		.addPassthroughCopy({
